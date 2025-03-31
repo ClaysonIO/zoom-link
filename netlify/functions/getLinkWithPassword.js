@@ -11,9 +11,12 @@ exports.handler = async function(event, context) {
     // Parse the form data
     const formData = new URLSearchParams(event.body);
     const password = formData.get('password');
+    
+    // Normalize password: lowercase and remove spaces
+    const normalizedPassword = password ? password.toLowerCase().replace(/\s+/g, '') : '';
 
     // If no password was provided, redirect to the main page
-    if (!password) {
+    if (!normalizedPassword) {
       return {
         statusCode: 302,
         headers: {
@@ -46,8 +49,10 @@ exports.handler = async function(event, context) {
       };
     }
 
-    // Find a matching password
-    const match = passwordLinks.find(entry => entry.pwd === password);
+    // Find a matching password (normalize stored passwords the same way)
+    const match = passwordLinks.find(entry => 
+      entry.pwd.toLowerCase().replace(/\s+/g, '') === normalizedPassword
+    );
 
     if (match && match.link) {
       // Redirect to the Zoom link if there's a match

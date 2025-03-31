@@ -91,6 +91,14 @@ input[type="text"]::placeholder {
     font-style: italic;
 }
 
+.password-hint {
+    display: block;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
 .btn {
     background: linear-gradient(135deg, #2d8cff 0%, #1a5dab 100%);
     color: white;
