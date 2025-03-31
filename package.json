@@ -1,0 +1,27 @@
+{
+  "name": "zoom-link",
+  "version": "1.0.0",
+  "description": "Mountain zoom link",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.0.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claysonio/zoom-link.git"
+  },
+  "author": "Daniel Clayson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claysonio/zoom-link/issues"
+  },
+  "homepage": "https://github.com/claysonio/zoom-link#readme"
+}

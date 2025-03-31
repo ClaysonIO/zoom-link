@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Zoom Meeting Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zoom Meeting Access</h1>
+        <p class="subtitle">Enter your password to access your meeting in the mountains</p>
+        <form action="/.netlify/functions/getLinkWithPassword" method="POST">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Access My Meeting &#x1F5FA;</button>
+        </form>
+    </div>
+</body>
+</html>
